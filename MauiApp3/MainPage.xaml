@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+    <ContentPage.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Padding" Value="30,20" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+        <LinearGradientBrush x:Key="CoachGradient"
+                         StartPoint="0,0"
+                         EndPoint="0,1">
+            <GradientStop Color="#00000000" Offset="0.0" />
+            <GradientStop Color="#CC000000" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Resources>
+    
+<Grid RowDefinitions="*">
+    <Image
+        Source="gym_hero_image.jpg"
+        Aspect="AspectFill"
+        HorizontalOptions="Fill"/>
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#00000033" Offset="0.0" />
+                    <GradientStop Color="#00000099" Offset="0.5" />
+                    <GradientStop Color="#FF000000" Offset="1.0" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+        <ScrollView>
+            <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+                <Label 
+                Text="Choose your AI Coach"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                
+                <Border StrokeShape="RoundRectangle 10" WidthRequest="300" HeightRequest="140" Stroke="Black">
+                    <Grid HeightRequest="140" WidthRequest="300">
+                        <Image 
+                        Source="slim_coach_photo.jpg"
+                        Aspect="AspectFill"/>
+                        <BoxView Background="{StaticResource CoachGradient}"/>
+                        <Button
+                x:Name="NewPage1Btn"
+                Text="🧍🏻‍Slim Seeker"
+                Clicked="OnNavigateNewPage1ButtonClicked"
+                Style="{StaticResource ButtonStyle}"/>
+                    </Grid>
+                </Border>
+                <Border StrokeShape="RoundRectangle 10" WidthRequest="300" HeightRequest="140" Stroke="Black">
+                    <Grid HeightRequest="140" WidthRequest="300">
+                        <Image 
+                        Source="lean_machine_photo.jpeg"
+                        Aspect="AspectFill"/>
+                        <BoxView Background="{StaticResource CoachGradient}"/>
+                        <Button
+                x:Name="NewPage2Btn"
+                Text="💪Lean Machine"
+                Style="{StaticResource ButtonStyle}"
+                Clicked="OnNavigateNewPage2ButtonClicked" />
+                    </Grid>
+                </Border>
+                <Border StrokeShape="RoundRectangle 10" WidthRequest="300" HeightRequest="140" Stroke="Black">
+                    <Grid HeightRequest="140" WidthRequest="300">
+                        <Image 
+                        Source="muscle_macerik_photo.jpg"
+                        Aspect="AspectFill"/>
+                        <BoxView Background="{StaticResource CoachGradient}"/>
+                        <Button
+                x:Name="NewPage3Btn"
+                Text="🏋️‍Muscle Macerick"
+                Style="{StaticResource ButtonStyle}"
+                Clicked="OnNavigateNewPage3ButtonClicked" />
+                    </Grid>
+                </Border>
+                <Border StrokeShape="RoundRectangle 10" WidthRequest="300" HeightRequest="140" Stroke="Black">
+                    <Grid HeightRequest="140" WidthRequest="300">
+                        <Image 
+                        Source="custom_coach_photo.jpg"
+                        Aspect="AspectFill"/>
+                        <BoxView Background="{StaticResource CoachGradient}"/>
+                        <Button                 
+                x:Name="NewPage4Btn"
+                Text="🚀 Build your own Coach"
+                Style="{StaticResource ButtonStyle}"
+                Clicked="OnNavigateNewPage4ButtonClicked" />
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+    </ScrollView>
+</Grid>
+
+</ContentPage>
