@@ -3,33 +3,154 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.NewPage1"
              Title="NewPage1">
-    <VerticalStackLayout>
-        
+    <ContentPage.Resources>
+        <Style x:Key="InformationBorderStyle" TargetType="Border">
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 10" />
+            <Setter Property="Margin" Value="4,0,0,0" />
+            <Setter Property="Padding" Value="8,3"/>
+        </Style>
+
+        <Style x:Key="InformationLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+        </Style>
+        <Style x:Key="MainBorderStyle" TargetType="Border">
+            <Setter Property="WidthRequest" Value="600"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
+            <Setter Property="BackgroundColor" Value="#a975bf"/>
+            <Setter Property="Padding" Value="16"/>
+
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Spacing="10" Padding="10">
+
         <Label 
             Text="My Workout plans"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        
+
         <Border Stroke="Black"
                 StrokeThickness="2"
                 StrokeShape="RoundRectangle 10"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
-            
+
             <Label 
-            Text="✨ Unlimited Plans"
-            VerticalTextAlignment="Center" 
-            HorizontalTextAlignment="Center"
-            BackgroundColor="Purple"
-            Padding="5,3"
-            TextColor="White"/>
+                Text="✨ Unlimited Plans"
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center"
+                BackgroundColor="Purple"
+                Padding="5,3"
+                TextColor="White"/>
         </Border>
-        
+
         <Label 
             Text="My Workout plans"
             VerticalOptions="Start"/>
-        
-        
-        
+
+        <Border
+            Style="{StaticResource MainBorderStyle}">
+            <Grid ColumnDefinitions="*, Auto">
+                <!--POMYSŁ NA VERTICAL STACK LAYOUT ZOSTAŁ WYKONANY Z POMOCĄ SZTUCZNEJ INTELIGENCJI.-->
+                <VerticalStackLayout Grid.Column="0" Spacing="12">
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                            Text="My muscle builder plan"
+                            FontSize="18"
+                            FontAttributes="Bold"/>
+
+                        <HorizontalStackLayout Spacing="5">
+                            <Label Text="By Ai Coach"
+                                   FontSize="12"
+                                   VerticalOptions="Center"/>
+                            <Border BackgroundColor="#FF6B6B" Style="{StaticResource InformationBorderStyle}">
+                                <Label Text="💪 Muscle Maverick" Style="{StaticResource InformationLabel}"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#ccb25e" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Intermediate" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#5ebfcc" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Gym" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="3 Workouts" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Tue,Thu,Sat" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="3">
+                        <Label Text="🧍 Medium fitness level" TextColor="#333333" FontSize="11" />
+                        <Label Text="⏱ Workouts approx. 45 mins" TextColor="#333333" FontSize="11" />
+                        <Label Text="📅 Created on 31 Oct 2024" TextColor="#333333" FontSize="11" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+
+                <Label Grid.Column="1"
+                       Text="›"
+                       FontSize="28"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
+
+        <Border
+       Style="{StaticResource MainBorderStyle}">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="12">
+                    <VerticalStackLayout Spacing="4">
+                        <Label
+                       Text="MY weight loss plan"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+
+                        <HorizontalStackLayout Spacing="5">
+                            <Label Text="By Ai Coach"
+
+                              FontSize="12"
+                              VerticalOptions="Center"/>
+                            <Border BackgroundColor="#FF6B6B" Style="{StaticResource InformationBorderStyle}">
+                                <Label Text="🧍🏻‍ Slim Seeker" Style="{StaticResource InformationLabel}"/>
+                            </Border>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#4cd453" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Beginner" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#5ebfcc" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Gym and home" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="3 Workouts" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="Mon, Wed, Fri" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="3">
+                        <Label Text="🧍 Low fitness level" TextColor="#333333" FontSize="11" />
+                        <Label Text="⏱ Workouts approx. 60 mins" TextColor="#333333" FontSize="11" />
+                        <Label Text="📅 Created on 31 Oct 2024" TextColor="#333333" FontSize="11" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+
+                <Label Grid.Column="1"
+                  Text="›"
+                  FontSize="28"
+                  VerticalOptions="Center"
+                  HorizontalOptions="End"
+                  Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
+
+
     </VerticalStackLayout>
 </ContentPage>
