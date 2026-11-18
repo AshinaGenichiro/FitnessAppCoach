@@ -108,6 +108,103 @@
                        Margin="10,0,0,0"/>
             </Grid>
         </Border>
-
+        
+        <Border
+     WidthRequest="600"
+     StrokeShape="RoundRectangle 20"
+     Stroke="Transparent"
+     BackgroundColor="#E6D9FF"
+     Padding="16">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="8">
+                    <VerticalStackLayout Spacing="2">
+                        <Label
+                     Text="At-Home Circut"
+                     FontSize="18"
+                     TextColor="Black"
+                     FontAttributes="Bold"/>
+                        <Label
+                     Text="Full body"
+                     FontSize="12"
+                     TextColor="#444444"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                        <Label Text="🆕" FontSize="12" VerticalOptions="Center"/>
+                        <Label Text="You haven't done this yet"
+                        TextColor="#555555"
+                        FontSize="11"
+                        VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="6 exercises" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="60 mins" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="📅" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Preferred Day: Wednesday" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Label Grid.Column="1"
+                Text="›"
+                FontSize="32"
+                TextColor="#444444"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
+        
+        <Border
+     WidthRequest="600"
+     StrokeShape="RoundRectangle 20"
+     Stroke="Transparent"
+     BackgroundColor="#E6D9FF"
+     Padding="16">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="8">
+                    <VerticalStackLayout Spacing="2">
+                        <Label
+                     Text="Gym Cardio &amp; Strength"
+                     FontSize="18"
+                     TextColor="Black"
+                     FontAttributes="Bold"/>
+                        <Label
+                     Text="Full body"
+                     FontSize="12"
+                     TextColor="#444444"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                        <Label Text="🆕" FontSize="12" VerticalOptions="Center"/>
+                        <Label Text="You haven't done this yet"
+                        TextColor="#555555"
+                        FontSize="11"
+                        VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="5 exercises" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="60 mins" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="📅" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Preferred Day: Monday" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Label Grid.Column="1"
+                Text="›"
+                FontSize="32"
+                TextColor="#444444"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
