@@ -1,12 +1,174 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp3.NewPage4"
-             Title="NewPage4">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiApp3.NewPage4"
+    Title="Workout">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="12">
+            <Label
+                x:Name="TimerLabel"
+                Text="00:00:00"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#333333" />
+            <Label
+                Text="Gym Cardio &amp; Strength"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+            <Border
+                BackgroundColor="#EEEEEE"
+                Stroke="#EEEEEE"
+                Padding="12"
+                Margin="0,5"
+                StrokeShape="RoundRectangle 14">
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="Leg Press"
+                        FontSize="18"
+                        FontAttributes="Bold" />
+                    <HorizontalStackLayout Spacing="5">
+                        <Border BackgroundColor="#555555"
+                                Padding="8,3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10">
+                            <Label Text="Legs"
+                                   TextColor="White"
+                                   FontSize="11"/>
+                        </Border>
+                        <Border BackgroundColor="#8B5CF6"
+                                Padding="8,3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10">
+                            <Label Text="3 sets"
+                                   TextColor="White"
+                                   FontSize="11"/>
+                        </Border>
+                        <Border BackgroundColor="#A78BFA"
+                                Padding="8,3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10">
+                            <Label Text="10-12 reps"
+                                   TextColor="White"
+                                   FontSize="11"/>
+                        </Border>
+                        <Border BackgroundColor="#6EE7B7"
+                                Padding="8,3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10">
+                            <Label Text="10 mins"
+                                   TextColor="#333333"
+                                   FontSize="11"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="5">
+                        <Button
+                            x:Name="HelpButton"
+                            Text="ⓘ Exercise Help - Show details ▼"
+                            BackgroundColor="#E5E7EB"
+                            TextColor="#2563EB"
+                            FontSize="13"
+                            FontAttributes="Bold"
+                            Clicked="HelpButton_Clicked"/>
+                        <VerticalStackLayout
+                            x:Name="HelpDetails"
+                            IsVisible="False"
+                            Padding="8"
+                            Spacing="5">
+                            <CollectionView
+                                ItemsSource="{Binding ExerciseDetails}"
+                                HeightRequest="150"
+                                SelectionMode="None">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label
+                                            Text="{Binding .}"
+                                            FontSize="12"
+                                            Padding="5"
+                                            TextColor="#444444"/>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <BoxView HeightRequest="1"
+                             Color="LightGray"/>
+                    <Label
+                        Text="Your Sets"
+                        FontSize="16"
+                        FontAttributes="Bold"/>
+                    <VerticalStackLayout
+                        x:Name="SetsLayout"
+                        Spacing="8">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Set 1"
+                                   FontAttributes="Bold"/>
+                            <Grid ColumnDefinitions="*,*"
+                                  ColumnSpacing="10">
+                                <Entry
+                                    Placeholder="Weight (kg)"
+                                    Text="30"
+                                    Keyboard="Numeric"/>
+                                <Entry
+                                    Grid.Column="1"
+                                    Placeholder="Reps"
+                                    Text="8"
+                                    Keyboard="Numeric"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Set 2"
+                                   FontAttributes="Bold"/>
+                            <Grid ColumnDefinitions="*,*"
+                                  ColumnSpacing="10">
+                                <Entry
+                                    Placeholder="Weight (kg)"
+                                    Text="25"
+                                    Keyboard="Numeric"/>
+                                <Entry
+                                    Grid.Column="1"
+                                    Placeholder="Reps"
+                                    Text="8"
+                                    Keyboard="Numeric"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Set 3"
+                                   FontAttributes="Bold"/>
+
+                            <Grid ColumnDefinitions="*,*"
+                                  ColumnSpacing="10">
+                                <Entry
+                                    Placeholder="Weight (kg)"
+                                    Text="20"
+                                    Keyboard="Numeric"/>
+                                <Entry
+                                    Grid.Column="1"
+                                    Placeholder="Reps"
+                                    Text="10"
+                                    Keyboard="Numeric"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                    <Button
+                        Text="+ Add Set"
+                        BackgroundColor="#EEE8FF"
+                        TextColor="#6A5ACD"
+                        Clicked="AddSet_Clicked"/>
+                    <Button
+                        x:Name="CompleteButton"
+                        Text="Mark As Complete"
+                        BackgroundColor="#D1D5DB"
+                        TextColor="#333333"
+                        Clicked="MarkComplete_Clicked"/>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

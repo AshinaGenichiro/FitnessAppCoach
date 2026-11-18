@@ -3,10 +3,240 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp3.NewPage3"
              Title="NewPage3">
+    <ContentPage.Resources>
+        <Style x:Key="InformationBorderStyle" TargetType="Border">
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 10" />
+            <Setter Property="Margin" Value="4,0,0,0" />
+            <Setter Property="Padding" Value="8,3"/>
+        </Style>
+
+        <Style x:Key="InformationLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="2,0,0,0"/>
+        </Style>
+    </ContentPage.Resources>
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="At-Home Circut"
+            TextColor="Green"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="🎯"/>
+            <Label Text="Targets Full body"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="⏱️"/>
+            <Label Text="60 mins"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center"> 
+            <Label Text="⭐"/>
+            <Label Text="You haven't done this yet!"/>
+        </HorizontalStackLayout>
+        <Border Stroke="Transparent" StrokeShape="RoundRectangle 10" BackgroundColor="Green">
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="▶️"/>
+                <Button
+                Text="start workout "
+                    BackgroundColor="Transparent"/>
+
+            </HorizontalStackLayout>
+        </Border>
+        <Label Padding="20" FontSize="20" FontAttributes="Bold" Text="Exrcises in this workout"></Label>
+
+        <Border
+        WidthRequest="600"
+        StrokeShape="RoundRectangle 20"
+        Stroke="Transparent"
+        BackgroundColor="#E6D9FF"
+        Padding="16">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="8">
+                    <VerticalStackLayout Spacing="2">
+                        <Label
+                        Text="Skipping Rope"
+                        FontSize="18"
+                        TextColor="Black"
+                        FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="1 sets" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="1 reps" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="10 mins" Style="{StaticResource InformationLabel}"/>
+
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="🎯" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Targets " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="cardiovascular system "  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="Equpiment: " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="Skipping rope"  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="ℹ️ " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="Tap to see guidance " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Label Grid.Column="1"
+                   Text="›"
+                   FontSize="32"
+                   TextColor="#444444"
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
+        <Border
+WidthRequest="600"
+StrokeShape="RoundRectangle 20"
+Stroke="Transparent"
+BackgroundColor="#E6D9FF"
+Padding="16">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="8">
+                    <VerticalStackLayout Spacing="2">
+                        <Label
+                Text="Push-ups"
+                FontSize="18"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="3 sets" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="8-12 reps" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="10 mins" Style="{StaticResource InformationLabel}"/>
+
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="🎯" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Targets " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="chest tricpes "  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="ℹ️ " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="Tap to see guidance " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Label Grid.Column="1"
+           Text="›"
+           FontSize="32"
+           TextColor="#444444"
+           VerticalOptions="Center"
+           HorizontalOptions="End"
+           Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
+        <Border
+WidthRequest="600"
+StrokeShape="RoundRectangle 20"
+Stroke="Transparent"
+BackgroundColor="#E6D9FF"
+Padding="16">
+    <Grid ColumnDefinitions="*, Auto">
+        <VerticalStackLayout Grid.Column="0" Spacing="8">
+            <VerticalStackLayout Spacing="2">
+                <Label
+                Text="Lunges"
+                FontSize="18"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+            </VerticalStackLayout>
+            <HorizontalStackLayout Spacing="6">
+                <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                    <Label Text="3 sets" Style="{StaticResource InformationLabel}"/>
+                </Border>
+                <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                    <Label Text="12 each leg reps" Style="{StaticResource InformationLabel}"/>
+                </Border>
+                <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                    <Label Text="10 mins" Style="{StaticResource InformationLabel}"/>
+
+                </Border>
+            </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="🎯" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Targets " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="Legs, Glutes "  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                <Label Text="ℹ️ " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                <Label Text="Tap to see guidance " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <Label Grid.Column="1"
+           Text="›"
+           FontSize="32"
+           TextColor="#444444"
+           VerticalOptions="Center"
+           HorizontalOptions="End"
+           Margin="10,0,0,0"/>
+    </Grid>
+</Border>
+        <Border
+WidthRequest="600"
+StrokeShape="RoundRectangle 20"
+Stroke="Transparent"
+BackgroundColor="#E6D9FF"
+Padding="16">
+            <Grid ColumnDefinitions="*, Auto">
+                <VerticalStackLayout Grid.Column="0" Spacing="8">
+                    <VerticalStackLayout Spacing="2">
+                        <Label
+                Text="Dumbbell Bicep Curl"
+                FontSize="18"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="6">
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="3 sets" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#824cd4" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="12 reps each arm" Style="{StaticResource InformationLabel}"/>
+                        </Border>
+                        <Border BackgroundColor="#2ECC71" Style="{StaticResource InformationBorderStyle}">
+                            <Label Text="10 mins" Style="{StaticResource InformationLabel}"/>
+
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="💪" FontSize="11" VerticalOptions="Center"/>
+                        <Label Text="Targets " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="biceps "  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Spacing="5" Margin="0,2,0,0">
+                        <Label Text="Equpiment: " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="dumbell"  TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="ℹ️ " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                        <Label Text="Tap to see guidance " FontAttributes="Bold" TextColor="#333333" FontSize="11" VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <Label Grid.Column="1"
+           Text="›"
+           FontSize="32"
+           TextColor="#444444"
+           VerticalOptions="Center"
+           HorizontalOptions="End"
+           Margin="10,0,0,0"/>
+            </Grid>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
